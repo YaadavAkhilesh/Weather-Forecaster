@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>weather prediction</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./jquery.min.js"></script>
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <form class="search-bar" id="input-form">
+      <input type="text" placeholder="search" id="search-input">
+      <button type="submit"><img src="images/loader.gif" class="loader"><box-icon class="search-icon"
+          name='search-alt-2' color='gray'></box-icon></button>
+    </form>
+    <div class="weather-img-container">
+      <img src="images/clouds.png" style="--i:0" class="weather-img" id="weather-img">
+    </div>
+    <div class="temprature-detail-wrapper">
+      <p class="temprature" style="--i:0.6"><span id="temprature">0</span>°C</p>
+      <p class="city" id="city" style="--i:1.2">- - - - -</p>
+    </div>
+    <div class="sub-container">
+      <div class="sub-part">
+        <box-icon name='water' class="humidity-logo" color='#ffffff'></box-icon>
+        <div class="humidity-container">
+          <div class="sub-text" style="--i:1.8"><span id="humidity">0</span>%</div>
+          <div class="sub-heading">Humidity</div>
+        </div>
+      </div>
+      <div class="sub-part">
+        <box-icon name='wind' class="wind-logo" color='#ffffff'></box-icon>
+        <div class="humidity-container">
+          <div class="sub-text" style="--i:1.8"><span id="wind">0</span> km/h</div>
+          <div class="sub-heading">wind</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="error"><box-icon name='info-circle' color='#cbcbcb'></box-icon> City not found</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
